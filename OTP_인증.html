@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tailwind Admin Starter Template : Tailwind Toolbox</title>
+    <meta name="author" content="name" />
+    <meta name="description" content="description here" />
+    <meta name="keywords" content="keywords,here" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    />
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet" />
+    <!--Totally optional :) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              noto: ["'Noto Sans KR'", "sans-serif"],
+              opens: ["'Open Sans'", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body>
+    <div class="w-100 tracking-tighter w-[504px] mx-auto">
+      <div class="full">
+        <div class="px-6 font-noto font-medium text-[22px]">
+          <div
+            class="w-full py-5 flex justify-between items-center border-b-2 border-[#000]"
+          >
+            <div>OTP인증</div>
+            <button type="button">
+              <img src="img/icon/close.png" alt="" />
+            </button>
+          </div>
+          <div class="font-noto font-light text-[15px] mt-7">
+            <div class="">
+              1. 처음 인증을 하시는 경우에는, 먼저 구글 OTP를 설치하세요. <br />
+              2. 구글OTP앱을 실행하신 후, 바코드 스캔으로 아래 QR코드를
+              등록하세요
+            </div>
+          </div>
+          <div class="text-center">
+            <img src="img/icon/ico_bar.png" alt="" class="mx-auto mt-6" />
+            <span class="font-noto font-light text-[15px] mt-3"
+              >4초 이내에 OTP인증키를 입력하세요.</span
+            >
+          </div>
+          <div class="flex items-center justify-center mt-8">
+            <input
+              type="text"
+              class="w-[275px] border rounded-md mr-1 h-[39px]"
+            />
+            <button
+              class="font-noto font-light text-[15px] px-4 py-2 bg-[#333] text-white rounded-lg"
+            >
+              확인
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="flex w-full font-noto text-[15px] text-white mt-12">
+        <button
+          class="w-1/2 text-center bg-[#333] font-light py-4"
+          type="button"
+        >
+          취소
+        </button>
+        <button
+          class="w-1/2 text-center bg-[#ff00e4] font-light py-4"
+          type="button"
+        >
+          확인
+        </button>
+      </div>
+    </div>
+
+    <!-- Alpine.js -->
+    <script src="../postcss.config.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+  </body>
+</html>

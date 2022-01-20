@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tailwind Admin Starter Template : Tailwind Toolbox</title>
+    <meta name="author" content="name">
+    <meta name="description" content="description here">
+    <meta name="keywords" content="keywords,here">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Open+Sans:wght@300;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <!--Totally optional :) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        grey: '#c6c6c6',
+                        gblack: '#010101',
+                        bcolor: '#dbdbdb',
+                        tcolor: '#333333',
+                        bgcolor: '#999999',
+                        tacolor: '#cbcbcb',
+                        pcolor: '#aaaaaa',
+                        bgpink: '#ff00e4',
+                        bgbut: '#484848',
+                        title: '#010101',
+                        boxcolor: '#f5f5f5',
+                        ncolor: '#444444',
+                    },
+                    fontFamily: {
+                        noto: ["'Noto Sans KR'", "sans-serif"],
+                        opens: ["'Open Sans'", "sans-serif"],
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+<style>
+    .checkbox__box::after {
+        content: '';
+    }
+    .checkbox__input:checked + .checkbox__box {
+        background-color: #333;
+        border-color: #333;
+    }
+    .check {
+        color: #fff;
+        font-size: 9px;
+    }
+</style>
+
+<body class="w-100 bg-black px-[11px] py-[48px] flex gap-[10px] flex-wrap">
+    <div class="bg-white relative w-[620px] h-[868px]">
+        <div class="w-full h-full pt-[8px] px-[30px] relative">
+            <div class="w-full border-b-2 border-black mb-[31px] pb-[8px]">
+                <h1 class="font-noto font-[500] leading-[57px] tracking-[-1px] text-[22px] text-gblack">지적재산권 이용허락 계약서</h1>
+            </div>
+            <img class="absolute w-[22px] h-[22] top-[30px] right-[30px]" src='/DOWNLOADS/Admin-Template-master/img/close.png'>
+            <div class="w-full">
+                <table class="table-fixed w-full">
+                    <thead class="w-full">
+                        <tr class="w-full text-left border-t h-[48px] border-bcolor">
+                            <th class="w-3/12 border-r font-noto font-[400] tracking-[-1px] text-[15px] text-black border-bcolor">저작물명</th>
+                            <th class="w-9/12 font-noto font-[300] tracking-[-1px] text-[15px] text-tcolor pl-[18px]">Zunks 13172</th>
+                        </tr>
+                    </thead>
+                    <tbody class="w-full">
+                        <tr class="w-full text-left border-t h-[68px] border-bcolor">
+                            <td class="w-3/12 h-[68] border-r pb-[12px] pt-[15px] pr-[40px] font-noto font-[400] tracking-[-1px] text-[15px] text-black border-bcolor leading-[20px]">저작자 및 저작권 이용허락자</td>
+                            <td class="w-9/12 h-[68px] font-noto font-[300] tracking-[-1px] text-[15px] text-tcolor pl-[18px]">Zunks</td>
+                        </tr>
+                        <tr class="w-full text-left border-t h-[49px] border-bcolor">
+                            <td class="w-3/12 border-r font-noto font-[400] tracking-[-1px] text-[15px] text-black border-bcolor">저작권 이용자</td>
+                            <td class="w-9/12 font-noto font-[300] tracking-[-1px] text-[15px] text-tcolor pl-[18px]">User123</td>
+                        </tr>
+                        <tr class="w-full text-left border-t h-[106px] border-bcolor">
+                            <td class="w-3/12 h-[106px] border-r font-noto font-[400] tracking-[-1px] text-[15px] text-black border-bcolor">대상권리</td>
+                            <td class="w-9/12 h-[106px] font-noto font-[300] leading-[28px] tracking-[-1px] text-[15px] text-tcolor pl-[18px] py-[10px] select-none">
+                                <label for="checkbox1" class="inline-flex pointer items-center">
+                                    <input class="appearance none checked:bg-black hidden checkbox__input" id="checkbox1" type="checkbox">
+                                    <div class="border flex justify-center items-center shrink-0 checkbox__box border-grey w-[16px] h-[16px]"><i class="check fas fa-check"></i></div>
+                                    <p class="ml-[4px] mr-[10px]">복제권</p>
+                                </label>
+                                <label for="checkbox2" class="inline-flex pointer items-center">
+                                    <input class="appearance none checked:bg-black hidden checkbox__input" id="checkbox2" type="checkbox">
+                                    <div class="border flex justify-center items-center shrink-0 checkbox__box w-[16px] h-[16px] border-grey"><i class="check fas fa-check"></i></div>
+                                    <p class="ml-[4px] mr-[10px]">공연권</p>
+                                </label>
+                                <label for="checkbox3" class="inline-flex pointer items-center">
+                                    <input class="appearance none checked:bg-black hidden checkbox__input" id="checkbox3" type="checkbox">
+                                    <div class="border flex justify-center items-center shrink-0 checkbox__box w-[16px] h-[16px] border-grey"><i class="check fas fa-check"></i></div>
+                                    <p class="ml-[4px] mr-[10px]">전시권</p>
+                                </label>
+                                <label for="checkbox4" class="inline-flex pointer items-center">
+                                    <input class="appearance none checked:bg-black hidden checkbox__input" id="checkbox4" type="checkbox">
+                                    <div class="border flex justify-center items-center shrink-0 checkbox__box w-[16px] h-[16px] border-grey"><i class="check fas fa-check"></i></div>
+                                    <p class="ml-[4px] mr-[10px]">배포권</p>
+                                </label>
+                                <label for="checkbox5" class="inline-flex pointer items-center">
+                                    <input class="appearance none checked:bg-black hidden checkbox__input" id="checkbox5" type="checkbox">
+                                    <div class="border flex justify-center items-center shrink-0 checkbox__box w-[16px] h-[16px] border-grey"><i class="check fas fa-check"></i></div>
+                                    <p class="ml-[4px] mr-[10px]">대여권</p>
+                                </label>
+                                <label for="checkbox6" class="inline-flex pointer items-center">
+                                    <input class="appearance none checked:bg-black hidden checkbox__input" id="checkbox6" type="checkbox">
+                                    <div class="border flex justify-center items-center shrink-0 checkbox__box w-[16px] h-[16px] border-grey"><i class="check fas fa-check"></i></div>
+                                    <p class="ml-[4px] mr-[10px]">공중송신건 (</p>
+                                </label>
+                                <label for="checkbox7" class="inline-flex pointer items-center">
+                                    <input class="appearance none checked:bg-black hidden checkbox__input" id="checkbox7" type="checkbox">
+                                    <div class="border flex justify-center items-center shrink-0 checkbox__box w-[16px] h-[16px] border-grey"><i class="check fas fa-check"></i></div>
+                                    <p class="ml-[4px] mr-[10px]">방송권</p>
+                                </label>
+                                <label for="checkbox8" class="inline-flex pointer items-center">
+                                    <input class="appearance none checked:bg-black hidden checkbox__input" id="checkbox8" type="checkbox">
+                                    <div class="border flex justify-center items-center shrink-0 checkbox__box w-[16px] h-[16px] border-grey"><i class="check fas fa-check"></i></div>
+                                    <p class="ml-[4px] mr-[10px]">전송권</p>
+                                </label>
+                                <label for="checkbox9" class="inline-flex pointer items-center">
+                                    <input class="appearance none checked:bg-black hidden checkbox__input" id="checkbox9" type="checkbox">
+                                    <div class="border flex justify-center items-center shrink-0 checkbox__box w-[16px] h-[16px] border-grey"><i class="check fas fa-check"></i></div>
+                                    <p class="ml-[4px] mr-[10px]">디지털음성송신권 )</p>
+                                </label>
+                                <label for="checkbox10" class="inline-flex pointer items-center">
+                                    <input class="appearance none checked:bg-black hidden checkbox__input" id="checkbox10" type="checkbox">
+                                    <div class="border flex justify-center items-center shrink-0 checkbox__box w-[16px] h-[16px] border-grey"><i class="check fas fa-check"></i></div>
+                                    <p class="ml-[4px] mr-[10px]">2차적저작물작성권</p>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr class="w-full text-left border-t h-[127spx] border-bcolor">
+                            <td class="w-3/12 border-r font-noto font-[400] tracking-[-1px] text-[15px] text-black border-bcolor">신청인</td>
+                            <td class="w-9/12 font-noto font-[300] leading-[26px] tracking-[-1px] text-[15px] text-tcolor pl-[18px] py-[10px]">
+                                <ul class="">
+                                    <li class="flex items-center">
+                                        <div class="w-[3px] h-[3px] bg-bgcolor w-[3px] h-[3px] mr-[5px]"></div>
+                                        성명 (법인명) : 아이컴퍼니
+                                    </li>
+                                    <li class="flex items-center">
+                                        <div class="w-[3px] h-[3px] bg-bgcolor w-[3px] h-[3px] mr-[5px]"></div>
+                                        주민등록번호 (법인등록번호) : 123456-7654321
+                                    </li>
+                                    <li class="flex items-center">
+                                        <div class="w-[3px] h-[3px] bg-bgcolor w-[3px] h-[3px] mr-[5px]"></div>
+                                        <p class="text-tcolor">주소 : 서울시 중랑구 상봉동 1597</p>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <div class="w-[3px] h-[3px] bg-bgcolor w-[3px] h-[3px] mr-[5px]"></div>
+                                        연락처 : 010-1234-5678
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="w-full text-left border-t h-[48px] border-bcolor">
+                            <td class="w-3/12 border-r font-noto font-[400] tracking-[-1px] text-[15px] text-black border-bcolor">이용 허락 기간</td>
+                            <td class="w-9/12 font-noto font-[300] leading[26px] tracking[-1px] text-[15px] text-tcolor pl-[18px]">21-08-01 ~ 22-08-01</td>
+                        </tr>
+                        <tr class="w-full text-left border-t h-[49px] border-bcolor">
+                            <td class="w-3/12 h-[49px] border-r font-noto font-[400] tracking-[-1px] text-[15px] text-black border-bcolor">지급액</td>
+                            <td class="w-9/12 h-[49px] pl-[18px] flex justify-start items-center gap-[13px]">
+                                <p class="font-opens font-[500] text-[15px] text-tcolor">15 ETH</p>
+                                <p class="font-noto font-[300] leading-[28px] text-[15px] text-tcolor tracking-[-1px]"> (일시금)</p>
+                            </td>
+                        </tr>
+                        <tr class="w-full text-left border-t h-[49px] border-bcolor">
+                            <td class="w-3/12 border-r font-noto font-[400] tracking-[-1px] text-[15px] text-black border-bcolor">지급시기</td>
+                            <td class="w-9/12 font-noto font-[300] leading[28px] tracking[-1px] text-[15px] text-tcolor pl-[18px]">계약 완료 시점으로부터  1일 (24시간)</td>
+                        </tr>
+                        <tr class="w-full text-left border-y h-[103px] border-bcolor mb-[50px]">
+                            <td class="w-full h-[77px] font-noto font-[400] tracking-[-1px] text-[15px] text-black flex items-start pt-[15px]"><p>이용목적</p></td>
+                            <td class="w-9/12 h-fit font-noto font-[300] leading[28px] tracking[-1px] text-[15px] text-tcolor pl-[20px] pt-[7px] pb-[2px] border-l border-bcolor">
+                                <textarea placeholder="NFT 작품 전시회 전시 및 굿즈 판매" class="resize-none w-full px-[14px] py-[10px] text-gray-700 border rounded-lg focus:outline-none font-noto font-[300] leading[28px] tracking[-1px] text-[15px] text-tcolor" rows="3"></textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="w-full h-[56px] absolute bottom-0 left-0 right-0 bg-grey flex">
+                <button class="w-1/2 h-full bg-tcolor flex justify-center items-center">
+                    <a class="font-[15px] font-[300] text-white font-noto tracking-[-1px] leading-[57px]" href="">취소</a>
+                </button>
+                <button class="w-1/2 h-full bg-bgpink flex justify-center items-center">
+                    <a class="font-[15px] font-[300] text-white font-noto tracking-[-1px] leading-[57px]" href="">계약서 확인</a>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="bg-white relative w-[620px] h-[868px]">
+        <div class="w-full h-full pt-[8px] px-[30px] relative">
+            <div class="w-full border-b-2 border-black mb-[31px] pb-[8px]">
+                <h1 class="font-noto font-[500] leading-[57px] tracking-[-1px] text-[22px] text-gblack">지적재산권 이용허락 계약서</h1>
+            </div>
+            <img class="absolute w-[22px] h-[22] top-[30px] right-[30px]" src='/DOWNLOADS/Admin-Template-master/img/close.png'>
+            <div class="w-full">
+                <table class="table-fixed w-full">
+                    <thead class="w-full">
+                    <tr class="w-full text-left border-t h-[48px] border-bcolor">
+                        <th class="w-3/12 border-r font-noto font-[400] tracking-[-1px] text-[15px] text-black border-bcolor">저작물명</th>
+                        <th class="w-9/12 font-noto font-[300] tracking-[-1px] text-[15px] text-tcolor pl-[18px]">Zunks 13172</th>
+                    </tr>
+                    </thead>
+                    <tbody class="w-full">
+                    <tr class="w-full text-left border-t h-[68px] border-bcolor">
+                        <td class="w-3/12 h-[68] border-r pb-[12px] pt-[15px] pr-[40px] font-noto font-[400] tracking-[-1px] text-[15px] text-black border-bcolor leading-[20px]">저작자 및 저작권 이용허락자</td>
+                        <td class="w-9/12 h-[68px] font-noto font-[300] tracking-[-1px] text-[15px] text-tcolor pl-[18px]">Zunks</td>
+                    </tr>
+                    <tr class="w-full text-left border-t h-[49px] border-bcolor">
+                        <td class="w-3/12 border-r font-noto font-[400] tracking-[-1px] text-[15px] text-black border-bcolor">저작권 이용자</td>
+                        <td class="w-9/12 font-noto font-[300] tracking-[-1px] text-[15px] text-tcolor pl-[18px]">User123</td>
+                    </tr>
+                    <tr class="w-full text-left border-t h-[106px] border-bcolor">
+                        <td class="w-3/12 h-[106px] border-r font-noto font-[400] tracking-[-1px] text-[15px] text-black border-bcolor">대상권리</td>
+                        <td class="w-9/12 h-[106px] font-noto font-[300] leading-[28px] tracking-[-1px] text-[15px] text-tcolor pl-[18px] py-[10px] select-none">
+                            <label for="checkbox11" class="inline-flex pointer items-center">
+                                <input class="appearance none checked:bg-black hidden checkbox__input" id="checkbox11" type="checkbox">
+                                <div class="border flex justify-center items-center shrink-0 checkbox__box border-grey w-[16px] h-[16px]"><i class="check fas fa-check"></i></div>
+                                <p class="ml-[4px] mr-[10px]">복제권</p>
+                            </label>
+                            <label for="checkbox12" class="inline-flex pointer items-center">
+                                <input class="appearance none checked:bg-black hidden checkbox__input" id="checkbox12" type="checkbox">
+                                <div class="border flex justify-center items-center shrink-0 checkbox__box w-[16px] h-[16px] border-grey"><i class="check fas fa-check"></i></div>
+                                <p class="ml-[4px] mr-[10px]">공연권</p>
+                            </label>
+                            <label for="checkbox13" class="inline-flex pointer items-center">
+                                <input class="appearance none checked:bg-black hidden checkbox__input" id="checkbox13" type="checkbox">
+                                <div class="border flex justify-center items-center shrink-0 checkbox__box w-[16px] h-[16px] border-grey"><i class="check fas fa-check"></i></div>
+                                <p class="ml-[4px] mr-[10px]">전시권</p>
+                            </label>
+                            <label for="checkbox14" class="inline-flex pointer items-center">
+                                <input class="appearance none checked:bg-black hidden checkbox__input" id="checkbox14" type="checkbox">
+                                <div class="border flex justify-center items-center shrink-0 checkbox__box w-[16px] h-[16px] border-grey"><i class="check fas fa-check"></i></div>
+                                <p class="ml-[4px] mr-[10px]">배포권</p>
+                            </label>
+                            <label for="checkbox15" class="inline-flex pointer items-center">
+                                <input class="appearance none checked:bg-black hidden checkbox__input" id="checkbox15" type="checkbox">
+                                <div class="border flex justify-center items-center shrink-0 checkbox__box w-[16px] h-[16px] border-grey"><i class="check fas fa-check"></i></div>
+                                <p class="ml-[4px] mr-[10px]">대여권</p>
+                            </label>
+                            <label for="checkbox16" class="inline-flex pointer items-center">
+                                <input class="appearance none checked:bg-black hidden checkbox__input" id="checkbox16" type="checkbox">
+                                <div class="border flex justify-center items-center shrink-0 checkbox__box w-[16px] h-[16px] border-grey"><i class="check fas fa-check"></i></div>
+                                <p class="ml-[4px] mr-[10px]">공중송신건 (</p>
+                            </label>
+                            <label for="checkbox17" class="inline-flex pointer items-center">
+                                <input class="appearance none checked:bg-black hidden checkbox__input" id="checkbox17" type="checkbox">
+                                <div class="border flex justify-center items-center shrink-0 checkbox__box w-[16px] h-[16px] border-grey"><i class="check fas fa-check"></i></div>
+                                <p class="ml-[4px] mr-[10px]">방송권</p>
+                            </label>
+                            <label for="checkbox18" class="inline-flex pointer items-center">
+                                <input class="appearance none checked:bg-black hidden checkbox__input" id="checkbox18" type="checkbox">
+                                <div class="border flex justify-center items-center shrink-0 checkbox__box w-[16px] h-[16px] border-grey"><i class="check fas fa-check"></i></div>
+                                <p class="ml-[4px] mr-[10px]">전송권</p>
+                            </label>
+                            <label for="checkbox19" class="inline-flex pointer items-center">
+                                <input class="appearance none checked:bg-black hidden checkbox__input" id="checkbox19" type="checkbox">
+                                <div class="border flex justify-center items-center shrink-0 checkbox__box w-[16px] h-[16px] border-grey"><i class="check fas fa-check"></i></div>
+                                <p class="ml-[4px] mr-[10px]">디지털음성송신권 )</p>
+                            </label>
+                            <label for="checkbox20" class="inline-flex pointer items-center">
+                                <input class="appearance none checked:bg-black hidden checkbox__input" id="checkbox20" type="checkbox">
+                                <div class="border flex justify-center items-center shrink-0 checkbox__box w-[16px] h-[16px] border-grey"><i class="check fas fa-check"></i></div>
+                                <p class="ml-[4px] mr-[10px]">2차적저작물작성권</p>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr class="w-full text-left border-t h-[127spx] border-bcolor">
+                        <td class="w-3/12 border-r font-noto font-[400] tracking-[-1px] text-[15px] text-black border-bcolor">신청인</td>
+                        <td class="w-9/12 font-noto font-[300] leading-[26px] tracking-[-1px] text-[15px] text-tcolor pl-[18px] py-[10px]">
+                            <ul class="">
+                                <li class="flex items-center">
+                                    <div class="w-[3px] h-[3px] bg-bgcolor w-[3px] h-[3px] mr-[5px]"></div>
+                                    성명 (법인명) : 아이컴퍼니
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-[3px] h-[3px] bg-bgcolor w-[3px] h-[3px] mr-[5px]"></div>
+                                    주민등록번호 (법인등록번호) : 123456-7654321
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-[3px] h-[3px] bg-bgcolor w-[3px] h-[3px] mr-[5px]"></div>
+                                    <p class="text-tcolor">주소 : 서울시 중랑구 상봉동 1597</p>
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-[3px] h-[3px] bg-bgcolor w-[3px] h-[3px] mr-[5px]"></div>
+                                    연락처 : 010-1234-5678
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="w-full text-left border-t h-[48px] border-bcolor">
+                        <td class="w-3/12 border-r font-noto font-[400] tracking-[-1px] text-[15px] text-black border-bcolor">이용 허락 기간</td>
+                        <td class="w-9/12 font-noto font-[300] leading[26px] tracking[-1px] text-[15px] text-tcolor pl-[18px]">21-08-01 ~ 22-08-01</td>
+                    </tr>
+                    <tr class="w-full text-left border-t h-[49px] border-bcolor">
+                        <td class="w-3/12 h-[49px] border-r font-noto font-[400] tracking-[-1px] text-[15px] text-black border-bcolor">지급액</td>
+                        <td class="w-9/12 h-[49px] pl-[18px] flex justify-start items-center gap-[13px]">
+                            <p class="font-opens font-[500] text-[15px] text-tcolor">15 ETH</p>
+                            <p class="font-noto font-[300] leading-[28px] text-[15px] text-tcolor tracking-[-1px]"> (일시금)</p>
+                        </td>
+                    </tr>
+                    <tr class="w-full text-left border-t h-[49px] border-bcolor">
+                        <td class="w-3/12 border-r font-noto font-[400] tracking-[-1px] text-[15px] text-black border-bcolor">지급시기</td>
+                        <td class="w-9/12 font-noto font-[300] leading[28px] tracking[-1px] text-[15px] text-tcolor pl-[18px]">계약 완료 시점으로부터  1일 (24시간)</td>
+                    </tr>
+                    <tr class="w-full text-left border-y h-[103px] border-bcolor mb-[50px]">
+                        <td class="w-full h-[77px] font-noto font-[400] tracking-[-1px] text-[15px] text-black flex items-start pt-[15px]"><p>이용목적</p></td>
+                        <td class="w-9/12 h-fit font-noto font-[300] leading[28px] tracking[-1px] text-[15px] text-tcolor pl-[20px] pt-[7px] pb-[2px] border-l border-bcolor">
+                            <textarea placeholder="NFT 작품 전시회 전시 및 굿즈 판매" class="resize-none w-full px-[14px] py-[10px] text-gray-700 border rounded-lg focus:outline-none font-noto font-[300] leading[28px] tracking[-1px] text-[15px] text-tcolor" rows="3"></textarea>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="w-full h-[56px] absolute bottom-0 left-0 right-0 bg-grey flex">
+                <button class="w-4/12 h-full bg-tcolor flex justify-center items-center">
+                    <a class="font-[15px] font-[300] text-white font-noto tracking-[-1px] leading-[57px]" href="">취소</a>
+                </button>
+                <button class="w-4/12 h-full bg-bgbut flex justify-center items-center">
+                    <a class="font-[15px] font-[300] text-white font-noto tracking-[-1px] leading-[57px]" href="">계약서 확인</a>
+                </button>
+                <button class="w-4/12 h-full bg-bgpink flex justify-center items-center">
+                    <a class="font-[15px] font-[300] text-white font-noto tracking-[-1px] leading-[57px]" href="">대금결제</a>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="bg-white relative w-[620px] h-[868px]">
+        <div class="w-full h-full pt-[8px] px-[30px] relative">
+            <div class="w-full border-b-2 border-black mb-[31px] pb-[8px]">
+                <h1 class="font-noto font-[500] leading-[57px] tracking-[-1px] text-[22px] text-gblack">지적재산권 이용허락 계약서</h1>
+            </div>
+            <img class="absolute w-[22px] h-[22] top-[30px] right-[30px]" src='/DOWNLOADS/Admin-Template-master/img/close.png'>
+            <div class="w-full">
+                <table class="table-fixed w-full">
+                    <thead class="w-full">
+                    <tr class="w-full text-left border-t h-[48px] border-bcolor">
+                        <th class="w-3/12 border-r font-noto font-[400] tracking-[-1px] text-[15px] text-black border-bcolor">저작물명</th>
+                        <th class="w-9/12 font-noto font-[300] tracking-[-1px] text-[15px] text-tcolor pl-[18px]">Zunks 13172</th>
+                    </tr>
+                    </thead>
+                    <tbody class="w-full">
+                    <tr class="w-full text-left border-t h-[68px] border-bcolor">
+                        <td class="w-3/12 h-[68] border-r pb-[12px] pt-[15px] pr-[40px] font-noto font-[400] tracking-[-1px] text-[15px] text-black border-bcolor leading-[20px]">저작자 및 저작권 이용허락자</td>
+                        <td class="w-9/12 h-[68px] font-noto font-[300] tracking-[-1px] text-[15px] text-tcolor pl-[18px]">Zunks</td>
+                    </tr>
+                    <tr class="w-full text-left border-t h-[49px] border-bcolor">
+                        <td class="w-3/12 border-r font-noto font-[400] tracking-[-1px] text-[15px] text-black border-bcolor">저작권 이용자</td>
+                        <td class="w-9/12 font-noto font-[300] tracking-[-1px] text-[15px] text-tcolor pl-[18px]">User123</td>
+                    </tr>
+                    <tr class="w-full text-left border-t h-[106px] border-bcolor">
+                        <td class="w-3/12 h-[106px] border-r font-noto font-[400] tracking-[-1px] text-[15px] text-black border-bcolor">대상권리</td>
+                        <td class="w-9/12 h-[106px] font-noto font-[300] leading-[28px] tracking-[-1px] text-[15px] text-tcolor pl-[18px] py-[10px] select-none">
+                            <label for="checkbox21" class="inline-flex pointer items-center">
+                                <input class="appearance none checked:bg-black hidden checkbox__input" id="checkbox21" type="checkbox">
+                                <div class="border flex justify-center items-center shrink-0 checkbox__box border-grey w-[16px] h-[16px]"><i class="check fas fa-check"></i></div>
+                                <p class="ml-[4px] mr-[10px]">복제권</p>
+                            </label>
+                            <label for="checkbox22" class="inline-flex pointer items-center">
+                                <input class="appearance none checked:bg-black hidden checkbox__input" id="checkbox22" type="checkbox">
+                                <div class="border flex justify-center items-center shrink-0 checkbox__box w-[16px] h-[16px] border-grey"><i class="check fas fa-check"></i></div>
+                                <p class="ml-[4px] mr-[10px]">공연권</p>
+                            </label>
+                            <label for="checkbox23" class="inline-flex pointer items-center">
+                                <input class="appearance none checked:bg-black hidden checkbox__input" id="checkbox23" type="checkbox">
+                                <div class="border flex justify-center items-center shrink-0 checkbox__box w-[16px] h-[16px] border-grey"><i class="check fas fa-check"></i></div>
+                                <p class="ml-[4px] mr-[10px]">전시권</p>
+                            </label>
+                            <label for="checkbox24" class="inline-flex pointer items-center">
+                                <input class="appearance none checked:bg-black hidden checkbox__input" id="checkbox24" type="checkbox">
+                                <div class="border flex justify-center items-center shrink-0 checkbox__box w-[16px] h-[16px] border-grey"><i class="check fas fa-check"></i></div>
+                                <p class="ml-[4px] mr-[10px]">배포권</p>
+                            </label>
+                            <label for="checkbox25" class="inline-flex pointer items-center">
+                                <input class="appearance none checked:bg-black hidden checkbox__input" id="checkbox25" type="checkbox">
+                                <div class="border flex justify-center items-center shrink-0 checkbox__box w-[16px] h-[16px] border-grey"><i class="check fas fa-check"></i></div>
+                                <p class="ml-[4px] mr-[10px]">대여권</p>
+                            </label>
+                            <label for="checkbox26" class="inline-flex pointer items-center">
+                                <input class="appearance none checked:bg-black hidden checkbox__input" id="checkbox26" type="checkbox">
+                                <div class="border flex justify-center items-center shrink-0 checkbox__box w-[16px] h-[16px] border-grey"><i class="check fas fa-check"></i></div>
+                                <p class="ml-[4px] mr-[10px]">공중송신건 (</p>
+                            </label>
+                            <label for="checkbox27" class="inline-flex pointer items-center">
+                                <input class="appearance none checked:bg-black hidden checkbox__input" id="checkbox27" type="checkbox">
+                                <div class="border flex justify-center items-center shrink-0 checkbox__box w-[16px] h-[16px] border-grey"><i class="check fas fa-check"></i></div>
+                                <p class="ml-[4px] mr-[10px]">방송권</p>
+                            </label>
+                            <label for="checkbox28" class="inline-flex pointer items-center">
+                                <input class="appearance none checked:bg-black hidden checkbox__input" id="checkbox28" type="checkbox">
+                                <div class="border flex justify-center items-center shrink-0 checkbox__box w-[16px] h-[16px] border-grey"><i class="check fas fa-check"></i></div>
+                                <p class="ml-[4px] mr-[10px]">전송권</p>
+                            </label>
+                            <label for="checkbox29" class="inline-flex pointer items-center">
+                                <input class="appearance none checked:bg-black hidden checkbox__input" id="checkbox29" type="checkbox">
+                                <div class="border flex justify-center items-center shrink-0 checkbox__box w-[16px] h-[16px] border-grey"><i class="check fas fa-check"></i></div>
+                                <p class="ml-[4px] mr-[10px]">디지털음성송신권 )</p>
+                            </label>
+                            <label for="checkbox30" class="inline-flex pointer items-center">
+                                <input class="appearance none checked:bg-black hidden checkbox__input" id="checkbox30" type="checkbox">
+                                <div class="border flex justify-center items-center shrink-0 checkbox__box w-[16px] h-[16px] border-grey"><i class="check fas fa-check"></i></div>
+                                <p class="ml-[4px] mr-[10px]">2차적저작물작성권</p>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr class="w-full text-left border-t h-[127spx] border-bcolor">
+                        <td class="w-3/12 border-r font-noto font-[400] tracking-[-1px] text-[15px] text-black border-bcolor">신청인</td>
+                        <td class="w-9/12 font-noto font-[300] leading-[26px] tracking-[-1px] text-[15px] text-tcolor pl-[18px] py-[10px]">
+                            <ul class="">
+                                <li class="flex items-center">
+                                    <div class="w-[3px] h-[3px] bg-bgcolor w-[3px] h-[3px] mr-[5px]"></div>
+                                    성명 (법인명) : 아이컴퍼니
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-[3px] h-[3px] bg-bgcolor w-[3px] h-[3px] mr-[5px]"></div>
+                                    주민등록번호 (법인등록번호) : 123456-7654321
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-[3px] h-[3px] bg-bgcolor w-[3px] h-[3px] mr-[5px]"></div>
+                                    <p class="text-tcolor">주소 : 서울시 중랑구 상봉동 1597</p>
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-[3px] h-[3px] bg-bgcolor w-[3px] h-[3px] mr-[5px]"></div>
+                                    연락처 : 010-1234-5678
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="w-full text-left border-t h-[48px] border-bcolor">
+                        <td class="w-3/12 border-r font-noto font-[400] tracking-[-1px] text-[15px] text-black border-bcolor">이용 허락 기간</td>
+                        <td class="w-9/12 font-noto font-[300] leading[26px] tracking[-1px] text-[15px] text-tcolor pl-[18px]">21-08-01 ~ 22-08-01</td>
+                    </tr>
+                    <tr class="w-full text-left border-t h-[49px] border-bcolor">
+                        <td class="w-3/12 h-[49px] border-r font-noto font-[400] tracking-[-1px] text-[15px] text-black border-bcolor">지급액</td>
+                        <td class="w-9/12 h-[49px] pl-[18px] flex justify-start items-center gap-[13px]">
+                            <p class="font-opens font-[500] text-[15px] text-tcolor">15 ETH</p>
+                            <p class="font-noto font-[300] leading-[28px] text-[15px] text-tcolor tracking-[-1px]"> (일시금)</p>
+                        </td>
+                    </tr>
+                    <tr class="w-full text-left border-t h-[49px] border-bcolor">
+                        <td class="w-3/12 border-r font-noto font-[400] tracking-[-1px] text-[15px] text-black border-bcolor">지급시기</td>
+                        <td class="w-9/12 font-noto font-[300] leading[28px] tracking[-1px] text-[15px] text-tcolor pl-[18px]">계약 완료 시점으로부터  1일 (24시간)</td>
+                    </tr>
+                    <tr class="w-full text-left border-y h-[103px] border-bcolor mb-[50px]">
+                        <td class="w-full h-[77px] font-noto font-[400] tracking-[-1px] text-[15px] text-black flex items-start pt-[15px]"><p>이용목적</p></td>
+                        <td class="w-9/12 h-fit font-noto font-[300] leading[28px] tracking[-1px] text-[15px] text-tcolor pl-[20px] pt-[7px] pb-[2px] border-l border-bcolor">
+                            <textarea placeholder="NFT 작품 전시회 전시 및 굿즈 판매" class="resize-none w-full px-[14px] py-[10px] text-gray-700 border rounded-lg focus:outline-none font-noto font-[300] leading[28px] tracking[-1px] text-[15px] text-tcolor" rows="3"></textarea>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="w-full h-[56px] absolute bottom-0 left-0 right-0 bg-grey flex">
+                <button class="w-1/2 h-full bg-tcolor flex justify-center items-center">
+                    <a class="font-[15px] font-[300] text-white font-noto tracking-[-1px] leading-[57px]" href="">취소</a>
+                </button>
+                <button class="w-1/2 h-full bg-bgpink flex justify-center items-center">
+                    <a class="font-[15px] font-[300] text-white font-noto tracking-[-1px] leading-[57px]" href="">최종확인</a>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="w-[562px] h-[470px] bg-white relative">
+        <img class="absolute w-[22px] h-[22] top-[30px] right-[30px]" src='/DOWNLOADS/Admin-Template-master/img/close.png'>
+        <div class="w-full font-[20px] font-noto tracking-[-1px] leading-[57px] text-center text-title mt-[42px] mb-[15px]">
+            <h1>이용 허락 계약이 체결되었습니다.</h1>
+        </div>
+        <div class="ml-[30px] mr-[38px] w-[494px] h-[248px] border-t border-b border-bcolor flex">
+            <div class="w-[224px] h-[246px] bg-boxcolor my-0 px-[30px] pb-[18px]">
+                <div class="w-[164px] h-[139px] overflow-hidden pt-[20px] mb-[3px]">
+                    <img src="img/box-pic.png" class="h-full w-full rounded-xl object-center object-none" >
+                </div>
+                <div class="w-full">
+                    <h1 class="font-[16px] text-center font-opens leading-[40px] text-black font-[600]">My Little Storybook</h1>
+                </div>
+                <div class="w-full flex items-center justify-center gap-[5px]">
+                    <div class="w-[27px] h-[27px]">
+                        <img src="img/skull.png" class="rounded-full w-full h-full" >
+                    </div>
+                    <p class="text-center font-opens font-[400] leading-[40px] font-[14px] text-ncolor">Rick Bajornas</p>
+                </div>
+            </div>
+            <div class="w-full my-auto">
+                <div class="w-full h-full pl-[30px] py-auto">
+                    <h1 class="font-noto tracking-[-1px] leading-[28px] text-[17px]">이용 허락 승인 권리 (L Token)</h1>
+                    <ul class="text-[15px] font-noto font-[300] text-tcolor leading-[27px]">
+                        <li class="flex items-center gap-[5px]"><img src="img/ic_check.png" class="w-[11px] h-[10px]"> 복제권</li>
+                        <li class="flex items-center gap-[5px]"><img src="img/ic_check.png" class="w-[11px] h-[10px]">전시권</li>
+                        <li class="flex items-center gap-[5px]"><img src="img/ic_check.png" class="w-[11px] h-[10px]">배포권</li>
+                        <li class="flex items-center gap-[5px]"><img src="img/ic_check.png" class="w-[11px] h-[10px]">2차적 저작물 작성권</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="w-full h-[56px] absolute bottom-0 left-0 right-0 bg-grey flex">
+            <button class="w-1/2 h-full bg-tcolor flex justify-center items-center">
+                <a class="font-[15px] font-[300] text-white font-noto tracking-[-1px] leading-[57px]" href="">취소</a>
+            </button>
+            <button class="w-1/2 h-full bg-bgpink flex justify-center items-center">
+                <a class="font-[15px] font-[300] text-white font-noto tracking-[-1px] leading-[57px]" href="">확인</a>
+            </button>
+        </div>
+    </div>
+
+
+
+
+    <div class="w-[562px] h-[470px] bg-white relative">
+        <img class="absolute w-[22px] h-[22] top-[30px] right-[30px]" src='/DOWNLOADS/Admin-Template-master/img/close.png'>
+        <div class="w-full font-[20px] font-noto tracking-[-1px] leading-[57px] text-center text-title mt-[42px] mb-[15px]">
+            <h1>이용 허락 계약이 체결되었습니다.</h1>
+        </div>
+        <div class="ml-[30px] mr-[38px] w-[494px] h-[248px] border-t border-b border-bcolor flex">
+            <div class="w-[224px] h-[246px] bg-boxcolor my-0 px-[30px] pb-[18px]">
+                <div class="w-[164px] h-[139px] overflow-hidden pt-[20px] mb-[3px]">
+                    <img src="img/box-pic.png" class="h-full w-full rounded-xl object-center object-none" >
+                </div>
+                <div class="w-full">
+                    <h1 class="font-[16px] text-center font-opens leading-[40px] text-black font-[600]">My Little Storybook</h1>
+                </div>
+                <div class="w-full flex items-center justify-center gap-[5px]">
+                    <div class="w-[27px] h-[27px]">
+                        <img src="img/skull.png" class="rounded-full w-full h-full" >
+                    </div>
+                    <p class="text-center font-opens font-[400] leading-[40px] font-[14px] text-ncolor">Rick Bajornas</p>
+                </div>
+            </div>
+            <div class="w-full my-auto">
+                <div class="w-full h-full pl-[30px] py-auto">
+                    <h1 class="font-noto tracking-[-1px] leading-[28px] text-[17px]">구매 권리 (L Token)</h1>
+                    <ul class="text-[15px] font-noto font-[300] text-tcolor leading-[27px]">
+                        <li class="flex items-center gap-[5px]"><img src="img/ic_check.png" class="w-[11px] h-[10px]"> 복제권</li>
+                        <li class="flex items-center gap-[5px]"><img src="img/ic_check.png" class="w-[11px] h-[10px]">전시권</li>
+                        <li class="flex items-center gap-[5px]"><img src="img/ic_check.png" class="w-[11px] h-[10px]">배포권</li>
+                        <li class="flex items-center gap-[5px]"><img src="img/ic_check.png" class="w-[11px] h-[10px]">2차적 저작물 작성권</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="w-full h-[56px] absolute bottom-0 left-0 right-0 bg-grey flex">
+            <button class="w-1/2 h-full bg-tcolor flex justify-center items-center">
+                <a class="font-[15px] font-[300] text-white font-noto tracking-[-1px] leading-[57px]" href="">취소</a>
+            </button>
+            <button class="w-1/2 h-full bg-bgpink flex justify-center items-center">
+                <a class="font-[15px] font-[300] text-white font-noto tracking-[-1px] leading-[57px]" href="">마이페이지로 이동</a>
+            </button>
+        </div>
+    </div>
+
+
+
+
+    <div class="w-[504px] h-[563px] bg-white">
+        <div class="w-full h-full pt-[8px] px-[30px] relative">
+            <img class="absolute w-[22px] h-[22] top-[30px] right-[30px]" src='/DOWNLOADS/Admin-Template-master/img/close.png'>
+            <div class="w-full border-b-2 border-black mb-[31px] pb-[8px]">
+                <h1 class="font-noto font-[500] leading-[57px] tracking-[-1px] text-[22px] text-gblack">OTP인증</h1>
+            </div>
+            <div class="w-full mb-[23px]">
+                <ul class="font-[15px] leading-[23px] tracking-[-1px] font-[300] font-noto text-tcolor">
+                    <li>1. 처음 인증을 하시는 경우에는, 먼저 구글 OTP를 설치하세요.</li>
+                    <li>2. 구글OTP앱을 실행하신 후, 바코드 스캔으로 아래 QR코드를 등록하세요</li>
+                </ul>
+            </div>
+            <div class="w-full mb-[9px]">
+                <img src="img/qr-code.png" class="w-[186px] h-[187px] mx-auto">
+            </div>
+            <div class="w-full mb-[26px]">
+                <p class="font-[15px] font-[300] text-tcolor font-noto tracking-[-1px] leading-[25px] text-center">4초 이내에 OTP인증키를 입력하세요.</p>
+            </div>
+            <div class="w-full h-[40px] font-noto font-[300] leading[28px] tracking[-1px] text-[15px] text-tcolor flex justify-center gap-[3px]">
+                <textarea placeholder="" class="resize-none w-[275px] px-[14px] py-[7px] text-gray-700 border rounded-lg focus:outline-none font-noto font-[300] leading[28px] tracking[-1px] text-[15px] text-tcolor" rows="1"></textarea>
+                <button class="w-[55px] h-[40px] bg-tcolor rounded-md flex justify-center items-center">
+                    <a class=" font-noto font-[300] leading[25px] tracking[-1px] text-[15px] text-white" href="">확인</a>
+                </button>
+            </div>
+            <div class="w-full h-[56px] absolute bottom-0 left-0 right-0 bg-grey flex">
+                <button class="w-1/2 h-full bg-tcolor flex justify-center items-center">
+                    <a class="font-[15px] font-[300] text-white font-noto tracking-[-1px] leading-[57px]" href="">취소</a>
+                </button>
+                <button class="w-1/2 h-full bg-bgpink flex justify-center items-center">
+                    <a class="font-[15px] font-[300] text-white font-noto tracking-[-1px] leading-[57px]" href="">확인</a>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="w-[464px] h-[380px] bg-white">
+        <div class="w-full h-full pt-[8px] px-[30px] relative">
+            <img class="absolute w-[22px] h-[22] top-[30px] right-[30px]" src='/DOWNLOADS/Admin-Template-master/img/close.png'>
+            <div class="w-full mt-[42px] mb-[15px]">
+                <h1 class="font-noto font-[500] leading-[57px] tracking-[-1px] text-[22px] text-gblack text-center">OTP인증</h1>
+            </div>
+            <div class="w-full font-noto font-[300] leading[28px] tracking[-1px] text-[15px] text-tcolor">
+                <textarea placeholder="거절 사유를 작성해 주세요." class="resize-none w-full px-[14px] py-[10px] text-gray-700 border rounded-lg focus:outline-none font-noto font-[300] leading[28px] tracking[-1px] text-[15px] text-tcolor" rows="6"></textarea>
+            </div>
+            <div class="w-full h-[56px] absolute bottom-0 left-0 right-0 bg-grey flex">
+                <button class="w-1/2 h-full bg-tcolor flex justify-center items-center">
+                    <a class="font-[15px] font-[300] text-white font-noto tracking-[-1px] leading-[57px]" href="">취소</a>
+                </button>
+                <button class="w-1/2 h-full bg-bgpink flex justify-center items-center">
+                    <a class="font-[15px] font-[300] text-white font-noto tracking-[-1px] leading-[57px]" href="">거절</a>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

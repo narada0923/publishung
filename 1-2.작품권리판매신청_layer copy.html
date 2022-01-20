@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    />
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet" />
+    <!--Totally optional :) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              noto: ["'Noto Sans KR'", "sans-serif"],
+              opens: ["'Open Sans'", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <div class="pt-16 tracking-tighter w-[872px] mx-auto border">
+      <div class="w-100">
+        <div class="text-center text-xl font-noto font-medium">
+          아래 정보를 바탕으로 토큰발행을 신청합니다.
+        </div>
+        <div class="mt-6">
+          <img
+            class="mx-auto rounded-xl"
+            style="width: 230px; height: 190px"
+            src="img/sub/bann_img_01.png"
+            alt=""
+          />
+        </div>
+        <div class="w-full px-6 mt-8">
+          <table class="w-full">
+            <body class="text-[15px]">
+              <tr class="border-t border-b border-[#dbdbdb] pl-10">
+                <td
+                  class="w-[188px] py-3 text-base border-r border-[#dbdbdb] font-noto font-normal"
+                >
+                  저작물명
+                </td>
+                <td class="text-[#666] py-3 pl-5 font-noto font-light">
+                  S27 Victory Lap IPA Illustration
+                </td>
+              </tr>
+              <tr class="border-b border-[#dbdbdb] pl-10">
+                <td
+                  class="w-[188px] py-3 text-base border-r border-[#dbdbdb] font-noto font-normal"
+                >
+                  작품설명
+                </td>
+                <td class="md:pr-24 text-[#666] py-3 pl-5 font-noto font-light">
+                  2차 판매 첫 달부터 모금된 전액은 동물 실험을 하지 말자는
+                  아이디어를 지지하기 위해 자선단체에 기부될 것입니다
+                </td>
+              </tr>
+              <tr class="border-b border-[#dbdbdb] pl-10">
+                <td
+                  class="w-[188px] py-3 text-base border-r border-[#dbdbdb] font-noto font-normal"
+                >
+                  작가소개
+                </td>
+                <td class="md:pr-24 text-[#666] py-3 pl-5 font-noto font-light">
+                  2차 판매 첫 달부터 모금된 전액은 동물 실험을 하지 말자는
+                  아이디어를 지지하기 위해 자선단체에 기부될 것입니다
+                </td>
+              </tr>
+              <tr class="border-b border-[#dbdbdb] pl-10">
+                <td
+                  class="w-[188px] py-3 text-base border-r border-[#dbdbdb] font-noto font-normal"
+                >
+                  Unlokcable contents
+                </td>
+                <td class="md:pr-24 text-[#666] py-3 pl-5 font-noto font-light">
+                  2차 판매 첫 달부터 모금된 전액은 동물 실험을 하지 말자는
+                  아이디어를 지지하기 위해
+                </td>
+              </tr>
+              <tr class="border-b border-[#dbdbdb] pl-10">
+                <td
+                  class="w-[188px] py-3 text-base border-r border-[#dbdbdb] font-noto font-normal"
+                >
+                  결제수단
+                </td>
+                <td
+                  class="flex items-center text-[#666] py-3 pl-5 font-noto font-light"
+                >
+                  <img src="img/icon/icon_eth_c.png" alt="" />
+                  <span class="ml-2 font-opens font-medium font-base">ETH</span>
+                </td>
+              </tr>
+              <tr class="border-b border-[#dbdbdb] pl-10">
+                <td
+                  class="w-[188px] py-3 text-base border-r border-[#dbdbdb] font-noto font-normal"
+                >
+                  보유 중인 권리 <br />
+                  (토큰화 할 권리)
+                </td>
+                <td
+                  class="text-[#333] py-3 pl-5 font-noto font-light text-[15px]"
+                >
+                  <div class="flex items-center">
+                    <img
+                      class="mr-1"
+                      src="img/icon/ic_check.png"
+                      alt=""
+                    />소유권<span class="text-[#e54343] ml-2"
+                      >크리에이터 로열티 5%
+                    </span>
+                  </div>
+                  <div class="flex items-center text-[14px]">
+                    <img class="mr-1" src="img/icon/ic_check.png" alt="" />
+                    <span class="mr-2">지적재사권</span>
+                    <div class="flex items-center">
+                      (
+                      <img class="mr-1" src="img/icon/ic_check.png" alt="" />
+                      <span class="mr-2">복제권</span>
+                      <img class="mr-1" src="img/icon/ic_check.png" alt="" />
+                      <span class="mr-2">공연권</span>
+                      <img class="mr-1" src="img/icon/ic_check.png" alt="" />
+                      <span class="mr-2">공중송신권</span>
+                      <img class="mr-1" src="img/icon/ic_check.png" alt="" />
+                      <span>전시권</span>
+                      )
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="border-b border-[#dbdbdb] pl-10">
+                <td
+                  class="w-[188px] py-3 text-base border-r border-[#dbdbdb] font-noto font-normal"
+                >
+                  저작 재산권 이용허락<br />
+                  계약 내역
+                </td>
+                <td class="md:pr-22 text-[#333] py-3 pl-5 font-noto font-light">
+                  <div class="flex flex-wrap">
+                    <div class="flex items-center mr-4">
+                      <div
+                        class="mr-2"
+                        style="
+                          content: \f095;
+                          height: 3px;
+                          width: 2px;
+                          background: #999999;
+                        "
+                      ></div>
+                      복제권
+                      <span class="text-[#ff00e4] font-medium ml-1">(4건)</span>
+                    </div>
+                    <div class="flex items-center mr-4">
+                      <div
+                        class="mr-2"
+                        style="
+                          content: \f095;
+                          height: 3px;
+                          width: 2px;
+                          background: #999999;
+                        "
+                      ></div>
+                      공연건
+                      <span class="text-[#ff00e4] font-medium ml-1">(6건)</span>
+                    </div>
+                    <div class="flex items-center mr-4">
+                      <div
+                        class="mr-2"
+                        style="
+                          content: \f095;
+                          height: 3px;
+                          width: 2px;
+                          background: #999999;
+                        "
+                      ></div>
+                      공중송신건
+                      <span class="text-[#ff00e4] font-medium ml-1">(6건)</span>
+                    </div>
+                    <div class="flex items-center mr-4">
+                      <div
+                        class="mr-2"
+                        style="
+                          content: \f095;
+                          height: 3px;
+                          width: 2px;
+                          background: #999999;
+                        "
+                      ></div>
+                      전시건
+                      <span class="text-[#ff00e4] font-medium ml-1">(6건)</span>
+                    </div>
+                    <div class="flex items-center mr-4">
+                      <div
+                        class="mr-2"
+                        style="
+                          content: \f095;
+                          height: 3px;
+                          width: 2px;
+                          background: #999999;
+                        "
+                      ></div>
+                      배포건
+                      <span class="text-[#ff00e4] font-medium ml-1">(6건)</span>
+                    </div>
+                    <div class="flex items-center mr-4">
+                      <div
+                        class="mr-2"
+                        style="
+                          content: \f095;
+                          height: 3px;
+                          width: 2px;
+                          background: #999999;
+                        "
+                      ></div>
+                      대여건
+                      <span class="text-[#ff00e4] font-medium ml-1">(6건)</span>
+                    </div>
+                    <div class="flex items-center mr-4">
+                      <div
+                        class="mr-2"
+                        style="
+                          content: \f095;
+                          height: 3px;
+                          width: 2px;
+                          background: #999999;
+                        "
+                      ></div>
+                      2차적 저작물 작성권
+                      <span class="text-[#ff00e4] font-medium ml-1">(6건)</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="border-b border-[#dbdbdb] pl-10">
+                <td
+                  class="w-[188px] py-3 text-base border-r border-[#dbdbdb] font-noto font-normal"
+                >
+                  저작권 등록 여부
+                </td>
+                <td class="text-[#333] py-3 pl-5 font-noto font-light">
+                  <div class="flex items-center">
+                    <img src="img/icon/ic_fle.png" class="mr-2" alt="" />
+                    <button type="button">CHEETA_저작권 등록증.png</button>
+                  </div>
+                </td>
+              </tr>
+            </body>
+          </table>
+        </div>
+        <div class="flex w-full font-noto text-[15px] text-white mt-12">
+          <button
+            class="w-1/2 text-center bg-[#333] font-light py-4"
+            type="button"
+          >
+            수정하기
+          </button>
+          <button
+            class="w-1/2 text-center bg-[#ff00e4] font-light py-4"
+            type="button"
+          >
+            신청하기
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

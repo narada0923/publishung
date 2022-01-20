@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    />
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet" />
+    <!--Totally optional :) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              noto: ["'Noto Sans KR'", "sans-serif"],
+              opens: ["'Open Sans'", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <div class="tracking-tighter w-[620px] mx-auto border">
+      <div class="w-100">
+        <div class="px-6 font-noto font-medium text-[22px]">
+          <div
+            class="w-full py-5 flex justify-between items-center border-b-2 border-[#000]"
+          >
+            <div>저작재산권 이용 허락 신청</div>
+            <div><img src="img/icon/close.png" alt="" /></div>
+          </div>
+        </div>
+        <div class="w-full px-6 mt-8">
+          <table class="w-full">
+            <body class="text-[15px]">
+              <tr class="border-t border-b border-[#dbdbdb] pl-10">
+                <td
+                  class="w-[188px] py-3 text-base border-r border-[#dbdbdb] font-noto font-normal"
+                >
+                  저작물명
+                </td>
+                <td class="text-[#666] py-3 pl-5 font-noto font-light">
+                  Zunks 13172
+                </td>
+              </tr>
+              <tr class="border-b border-[#dbdbdb] pl-10">
+                <td
+                  class="w-[188px] py-3 text-base border-r border-[#dbdbdb] font-noto font-normal"
+                >
+                  저작자 및 저작권<br />
+                  이용허락자
+                </td>
+                <td class="md:pr-24 text-[#666] py-3 pl-5 font-noto font-light">
+                  Zunks
+                </td>
+              </tr>
+              <tr class="border-b border-[#dbdbdb] pl-10">
+                <td
+                  class="w-[188px] py-3 text-base border-r border-[#dbdbdb] font-noto font-normal"
+                >
+                  저작권 이용자
+                </td>
+                <td class="md:pr-24 text-[#666] py-3 pl-5 font-noto font-light">
+                  User123
+                </td>
+              </tr>
+              <tr class="border-b border-[#dbdbdb] pl-10">
+                <td
+                  class="w-[188px] py-3 text-base border-r border-[#dbdbdb] font-noto font-normal"
+                >
+                  대상권리
+                </td>
+                <td class="text-[#666] py-3 pl-5 font-noto font-light">
+                  <div class="flex items-center">
+                    <img class="mr-1" src="img/icon/ic_check.png" alt="" />
+                    <span class="mr-2">복제권</span>
+                    <img class="mr-1" src="img/icon/ic_check.png" alt="" />
+                    <span class="mr-2">공연권</span>
+                    <img class="mr-1" src="img/icon/ic_check.png" alt="" />
+                    <span class="mr-2">전시권</span>
+                    <img class="mr-1" src="img/icon/ic_check.png" alt="" />
+                    <span class="mr-2">배포권</span>
+                    <img class="mr-1" src="img/icon/ic_check.png" alt="" />
+                    <span class="mr-2">대여권</span>
+                  </div>
+                  <div class="flex items-center mt-1">
+                    <img class="mr-1" src="img/icon/ic_check.png" alt="" />
+                    <span class="mr-2">2차적저작물작성권</span>
+                  </div>
+                </td>
+              </tr>
+              <tr class="border-b border-[#dbdbdb] pl-10">
+                <td
+                  class="w-[188px] py-3 text-base border-r border-[#dbdbdb] font-noto font-normal"
+                >
+                  신청인
+                </td>
+                <td
+                  class="text-[#333] py-3 pl-5 font-noto font-light text-[15px]"
+                >
+                  <div class="flex items-center mb-1">
+                    <div
+                      class="mr-2 bg-[#999]"
+                      style="content: \f095; height: 3px; width: 3px"
+                    ></div>
+                    <span>성명 (법인명) : 아이컴퍼니</span>
+                  </div>
+                  <div class="flex items-center mb-1">
+                    <div
+                      class="mr-2 bg-[#999]"
+                      style="content: \f095; height: 3px; width: 3px"
+                    ></div>
+                    <span>주민등록번호 (법인등록번호) : 123456-7654321</span>
+                  </div>
+                  <div class="flex items-center mb-1">
+                    <div
+                      class="mr-2 bg-[#999]"
+                      style="content: \f095; height: 3px; width: 3px"
+                    ></div>
+                    <span>주소 : 서울시 중랑구 상봉동 1597</span>
+                  </div>
+                  <div class="flex items-center">
+                    <div
+                      class="mr-2 bg-[#999]"
+                      style="content: \f095; height: 3px; width: 3px"
+                    ></div>
+                    <span>연락처 : 010-1234-5678</span>
+                  </div>
+                </td>
+              </tr>
+              <tr class="border-b border-[#dbdbdb] pl-10">
+                <td
+                  class="w-[188px] py-3 text-base border-r border-[#dbdbdb] font-noto font-normal"
+                >
+                  이용 허락 기간
+                </td>
+                <td class="text-[#333] py-3 pl-5 font-noto font-light">
+                  21-08-01 ~ 22-08-01
+                </td>
+              </tr>
+              <tr class="border-b border-[#dbdbdb] pl-10">
+                <td
+                  class="w-[188px] py-3 text-base border-r border-[#dbdbdb] font-noto font-normal"
+                >
+                  지급액
+                </td>
+                <td class="text-[#333] py-3 pl-5 font-noto font-light">
+                  <div class="flex items-center">
+                    <span class="font-opens font-medium text-[15px]"
+                      >15 ETH (일시급)</span
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr class="border-b border-[#dbdbdb] pl-10">
+                <td
+                  class="w-[188px] py-3 text-base border-r border-[#dbdbdb] font-noto font-normal"
+                >
+                  지급시기
+                </td>
+                <td class="text-[#333] py-3 pl-5 font-noto font-light">
+                  계약 완료 시점으로부터 1일 (24시간)
+                </td>
+              </tr>
+              <tr class="border-b border-[#dbdbdb] pl-10">
+                <td
+                  class="w-[188px] py-3 text-base border-r border-[#dbdbdb] font-noto font-normal"
+                >
+                  이용목적
+                </td>
+                <td class="text-[#333] py-3 pl-5 font-noto font-light">
+                  NFT 작품 전시회 전시 및 굿즈 판매 <br />
+                  NFT 작품 전시회 전시 및 굿즈 판매 <br />
+                  NFT 작품 전시회 전시 및 굿즈 판매
+                </td>
+              </tr>
+            </body>
+          </table>
+        </div>
+        <div class="flex w-full font-noto text-[15px] text-white mt-12">
+          <button
+            class="w-1/2 text-center bg-[#333] font-light py-4"
+            type="button"
+          >
+            취소
+          </button>
+          <button
+            class="w-1/2 text-center bg-[#ff00e4] font-light py-4"
+            type="button"
+          >
+            신청하기
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

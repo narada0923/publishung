@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tailwind Admin Starter Template : Tailwind Toolbox</title>
+    <meta name="author" content="name" />
+    <meta name="description" content="description here" />
+    <meta name="keywords" content="keywords,here" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    />
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet" />
+    <!--Totally optional :) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              noto: ["'Noto Sans KR'", "sans-serif"],
+              opens: ["'Open Sans'", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body>
+    <div class="w-100 tracking-tighter w-[504px] mx-auto">
+      <div class="full">
+        <div class="px-6 font-noto font-medium text-[22px]">
+          <div
+            class="w-full py-5 flex justify-between items-center border-b-2 border-[#000]"
+          >
+            <div>신고하기</div>
+            <button type="button">
+              <img src="img/icon/close.png" alt="" />
+            </button>
+          </div>
+          <div
+            class="flex justify-center items-center font-noto font-medium text-[20px] mt-9"
+          >
+            <img src="img/icon/ico_shingu.png" alt="" />
+            <div class="ml-4">
+              여러가지 사유에 해당 될 경우 <br />
+              대표적인 사유를 선택 해주세요.
+            </div>
+          </div>
+          <div class="font-noto font-light text-[15px] mt-10">
+            <input type="radio" class="mr-3 mb-1" /><span
+              >타인의 작품을 무단 도용 하였습니다.</span
+            >
+            <br />
+            <input type="radio" class="mr-3 mb-1" /><span
+              >저작권 위반 작품 입니다.</span
+            ><br />
+            <input type="radio" class="mr-3" /><span>기타</span> <br />
+            <textarea
+              placeholder="사유를 작성해 주세요"
+              class="mt-3 resize-none w-full px-[14px] py-[10px] text-gray-700 border rounded-lg focus:outline-none font-noto font-light leading[28px] text-[15px]"
+              rows="3"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="flex w-full font-noto text-[15px] text-white mt-12">
+        <button
+          class="w-1/2 text-center bg-[#333] font-light py-4"
+          type="button"
+        >
+          취소
+        </button>
+        <button
+          class="w-1/2 text-center bg-[#ff00e4] font-light py-4"
+          type="button"
+        >
+          신청하기
+        </button>
+      </div>
+    </div>
+
+    <!-- Alpine.js -->
+    <script src="../postcss.config.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+  </body>
+</html>

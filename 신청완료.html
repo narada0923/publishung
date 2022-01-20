@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tailwind Admin Starter Template : Tailwind Toolbox</title>
+    <meta name="author" content="name" />
+    <meta name="description" content="description here" />
+    <meta name="keywords" content="keywords,here" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    />
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet" />
+    <!--Totally optional :) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              noto: ["'Noto Sans KR'", "sans-serif"],
+              opens: ["'Open Sans'", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body>
+    <div class="w-100 tracking-tighter w-[504px] mx-auto">
+      <div class="full">
+        <div class="px-6 font-noto font-medium text-[22px]">
+          <div class="w-full py-5 flex justify-end">
+            <button type="button">
+              <img src="img/icon/close.png" alt="" />
+            </button>
+          </div>
+          <div
+            class="flex justify-center items-center font-noto font-medium text-[20px]"
+          >
+            지적재산권 이용 허락 신청이 완료되었습니다.
+          </div>
+        </div>
+        <div class="mt-9 mb-7">
+          <img class="mx-auto" src="img/icon/ico_done.png" alt="" />
+        </div>
+        <div class="text-center font-noto font-light font-[15px]">
+          저작권자가 계약 조건 검토 후 승인하면 계약이 진행됩니다. 저작권자가
+          <br />
+          계약 조건 수정 요청을 할 수 있습니다.
+        </div>
+      </div>
+      <div class="flex w-full font-noto text-[15px] text-white mt-12">
+        <button
+          class="w-full text-center bg-[#333] font-light py-4"
+          type="button"
+        >
+          완료
+        </button>
+      </div>
+    </div>
+
+    <!-- Alpine.js -->
+    <script src="../postcss.config.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+  </body>
+</html>

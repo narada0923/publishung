@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tailwind Admin Starter Template : Tailwind Toolbox</title>
+    <meta name="author" content="name" />
+    <meta name="description" content="description here" />
+    <meta name="keywords" content="keywords,here" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    />
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet" />
+    <!--Totally optional :) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              noto: ["'Noto Sans KR'", "sans-serif"],
+              opens: ["'Open Sans'", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body>
+    <div class="w-100 tracking-tighter w-[588px] mx-auto">
+      <div class="full">
+        <div class="px-6 font-noto font-medium text-[22px]">
+          <div class="w-full py-5 flex justify-end">
+            <button type="button">
+              <img src="img/icon/close.png" alt="" />
+            </button>
+          </div>
+          <div
+            class="flex justify-center items-center font-noto font-medium text-[20px]"
+          >
+            구매가 완료되었습니다.
+          </div>
+          <div
+            class="flex items-center justify-between border-b border-t py-6 px-5 mt-10"
+          >
+            <div class="flex items-center">
+              <img
+                class="w-[110px] h-[94px] rounded-xl"
+                src="img/sub/bann_img_01.png"
+                alt=""
+              />
+              <div class="ml-5 font-opens">
+                <h1 class="font-semibold text-[14px]">My Little Storybook</h1>
+                <div class="flex items-center mt-2">
+                  <img
+                    class="w-[27px] h-[27px] rounded-full"
+                    src="img/icon/pro1.png"
+                    alt=""
+                  />
+                  <span class="font-normal ml-2 text-[14px]"
+                    >Rick Bajornas</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="font-noto text-[15px] font-semibold">
+              15 <span class="font-normal">ETH</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex w-full font-noto text-[15px] text-white mt-12">
+        <button
+          class="w-full text-center bg-[#333] font-light py-4"
+          type="button"
+        >
+          마이페이지로 이동
+        </button>
+      </div>
+    </div>
+
+    <!-- Alpine.js -->
+    <script src="../postcss.config.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+  </body>
+</html>

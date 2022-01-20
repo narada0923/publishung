@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tailwind Admin Starter Template : Tailwind Toolbox</title>
+    <meta name="author" content="name">
+    <meta name="description" content="description here">
+    <meta name="keywords" content="keywords,here">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <!--Totally optional :) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        noto: ["'Noto Sans KR'", "sans-serif"],
+                        opens: ["'Open Sans'", "sans-serif"],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="w-100">
+        <div class="w-100 relative bg-top bg-cover bg-no-repeat block h-[190px]" style="background-image: url('img/sub/bann_img_01.png')">
+            <div class="absolute inset-0" style="background-color: rgba(0,0,0,.1)"></div>
+        </div>
+        <div class="w-100 border-b border-gray-300 border-solid relative bg-[#f5f5f5]] h-[198px]">
+            <div class="absolute rounded-full bg-white top-[-40px] w-[80px] h-[80px]" style="left: calc(50% - 40px)">
+                <img alt="" src='img/icon/pro_img.png' class="absolute rounded-full top-[2px] bottom-[2px] right-[2px] left-[2px] w-[76px] h-[76px]">
+                <div class="rounded-full bg-white absolute flex justify-center items-center border right-[-5px] bottom-[5px] w-[25px] h-[25px] border-[#bcbcbc]">
+                    <img alt="" src='img/icon/ico_edit.png'>
+                </div>
+            </div>
+            <div class="w-100">
+                <h1 class="text-center text-lg font-bold text-[#333] text-opens font-[20px] leading-[40px] pt-[50px] pb-[10px]">ASTRAL Kreativ GmBH</h1>
+            </div>
+            <div class="w-100 h-0.5">
+                <div class="w-10 h-0.5 mx-auto bg-tcolor"></div>
+            </div>
+            <div class="w-100 mt-[18px]" style="margin-top: 18px">
+                <p class="text-center font-noto text-[#666] tracking-[-1px] font-[300] text-[15px]">눈으로 담고 손으로 그리는 것'을 주제로 삼아 현실적인 우리의 모습과 일상, </p>
+                <p class="text-center font-noto text-[#666] tracking-[-1px] font-[300] text-[15px]">늘날 사회의 현실이나 단면을 풍자적으로 묘사하는 일러스트 작업을 하고 있는 일러스트레이터 입니다.</p>
+            </div>
+        </div>
+        <div class="w-100 px-16 flex h-[861px] gap-[55px]" style="height: 861px ; gap: 55px">
+            <div class="w-[200px]">
+                <div
+              class="w-full pb-10 pt-10 text-center border-b border-solid border-black"
+            >
+              <h1
+                style="
+                  font-size: 28px;
+                  font-family: 'Open Sans', sans-serif;
+                  font-weight: 600;
+                "
+              >
+                My Page
+              </h1>
+            </div>
+            <div class="py-7 border-b border-solid border-gray-300">
+              <h2
+                style="
+                  font-size: 18px;
+                  font-family: 'Noto Sans KR', sans-serif;
+                  font-weight: 700;
+                "
+              >
+                작품 관리
+              </h2>
+              <ul
+                style="
+                  font-size: 15px;
+                  font-family: 'Noto Sans KR', sans-serif;
+                  font-weight: 300;
+                "
+              >
+                <li class="mt-2 mb-1"><a href="./1.보유작품.html" class="">보유작품</a></li>
+                <li class="mb-1">
+                  <a href="./1-2-1-작품권리판매신청.html" class="">작품 권리 판매 신청</a>
+                </li>
+                <li class="mb-1"><a href="./2.등록중인작품.html" class="">소유권 거래 내역</a></li>
+                <li><a href="./1-이용허락계약내역Temuujin.html" class="">이용 허락 계약 내역</a></li>
+              </ul>
+            </div>
+            <div class="py-7 border-b border-solid border-gray-300">
+              <h2
+                style="
+                  font-size: 18px;
+                  font-family: 'Noto Sans KR', sans-serif;
+                  font-weight: 700;
+                "
+              >
+                지갑 관리
+              </h2>
+            </div>
+            <div class="py-7 border-b border-solid border-gray-300">
+              <h2
+                style="
+                  font-size: 18px;
+                  font-family: 'Noto Sans KR', sans-serif;
+                  font-weight: 700;
+                "
+              >
+                개인정보 관리
+              </h2>
+              <ul
+                style="
+                  font-size: 15px;
+                  font-family: 'Noto Sans KR', sans-serif;
+                  font-weight: 300;
+                "
+              >
+                <li class="my-1"><a href="" class="">개인정보 수정</a></li>
+                <li><a href="" class="">회원탈퇴</a></li>
+              </ul>
+            </div>
+            </div>
+            <div class="overflow-hidden	max-w-[1535px] max-h-[861px]">
+                <div class="py-[42px]">
+                    <h1 class="text-black text-[26px] leading-[40px] font-[500] font-noto tracking-[-2px]">이용 허락 계약 내역</h1>
+                </div>
+                <div class="border-b border-solid w-[1535px] h-[50px] border-[#333]">
+                    <ul class="flex items-start w-full h-[50px]">
+                        <li class="w-100 h-full flex items-center justify-center"><a class="border-t border-l border-[#dbdbdb] text-[16px] tracking-[-1px] leading-[40px] font-noto text-[#888] bg-[#f7f7f7] py-[4px] px-[33px] border-b border-b-[#333]" href="">검토중인 계약</a></li>
+                        <li class="flex items-center justify-center"><a class="border-t border-r border-l text-[16px] tracking-[-1px] leading-[40px] font-noto text-[#333] bg-white py-[4px] px-[34px] border-[#333] border-b border-b-white" href="">완료된 계약</a></li>
+                    </ul>
+                </div>
+                <div class="f-100 h-full mt-[30px]">
+                    <table class="w-full border-collapse">
+                        <thead class="w-full border-collapse">
+                            <tr class="border-l border-b border-[#dbdbdb] w-full h-[50px] border-t border-t-[#9c9c9c] bg-[#f8f8f8]">
+                                <th class="border-r font-normal border-[#dbdbdb] font-noto w-[340px] leading-[40px] tracking-[-1px]">저작물명</th>
+                                <th class="border-r font-normal border-[#dbdbdb] font-noto w-[300px] leading-[40px] tracking-[-1px]">저작권자</th>
+                                <th class="border-r font-normal border-[#dbdbdb] font-noto w-[300px] leading-[40px] tracking-[-1px]">신청인</th>
+                                <th class="border-r font-normal border-[#dbdbdb] font-noto w-[300px] leading-[40px] tracking-[-1px]">대상권리</th>
+                                <th class="border-r font-normal border-[#dbdbdb] font-noto w-[285px] leading-[40px] tracking-[-1px]">상태</th>
+                            </tr>
+                        </thead>
+                        <tbody class="w-full">
+                            <tr class="border-b border-b-[#dbdbdb] h-[50px]">
+                                <td class="border-r border-l text-center font-light border-[#dbdbdb] font-opens leading-[53px] text-[#333]">Zunks 13172</td>
+                                <td class="border-r border-l text-center font-light border-[#dbdbdb] font-opens leading-[53px] text-[#333]">Zunks</td>
+                                <td class="border-r border-l text-center font-light border-[#dbdbdb] font-opens leading-[53px] text-[#333]">User123</td>
+                                <td class="border-r border-l text-center font-light border-[#dbdbdb] font-opens leading-[53px] text-[#333]">복제권 외 3</td>
+                                <td class="border-r border-l font-light border-[#dbdbdb] font-opens leading-[53px] text-[#333] text-[14px] w-[285px]">
+                                    <div class="border rounded-sm flex justify-center items-center h-[27px] border-[#333] px-[10px] w-fit my-[5px] mx-auto">계약조건확인</div>
+                                </td>
+                            </tr>
+                            <tr class="" style="border-bottom: 1px solid #dbdbdb ; height: 50px">
+                                <td class="border-r border-l text-center font-light border-[#dbdbdb] font-opens leading-[53px] text-[#333]">Zunks 13172</td>
+                                <td class="border-r border-l text-center font-light border-[#dbdbdb] font-opens leading-[53px] text-[#333]">Zunks</td>
+                                <td class="border-r border-l text-center font-light border-[#dbdbdb] font-opens leading-[53px] text-[#333]">User123</td>
+                                <td class="border-r border-l text-center font-light border-[#dbdbdb] font-opens leading-[53px] text-[#333]">복제권 외 3</td>
+                                <td class="border-r border-l font-light border-[#dbdbdb] font-opens leading-[53px] text-[#e54343] text-[14px] w-[285px]">
+                                    <div class="border rounded-sm flex justify-center items-center h-[27px] border-[#e54343] px-[10px] w-fit my-[5px] mx-auto">계약거절</div>
+                                </td>
+                            </tr>
+                            <tr class="" style="border-bottom: 1px solid #dbdbdb ; height: 50px">
+                                <td class="border-r border-l text-center font-light border-[#dbdbdb] font-opens leading-[53px] text-[#333]">Zunks 13172</td>
+                                <td class="border-r border-l text-center font-light border-[#dbdbdb] font-opens leading-[53px] text-[#333]">Zunks</td>
+                                <td class="border-r border-l text-center font-light border-[#dbdbdb] font-opens leading-[53px] text-[#333]">User123</td>
+                                <td class="border-r border-l text-center font-light border-[#dbdbdb] font-opens leading-[53px] text-[#333]">복제권 외 3</td>
+                                <td class="border-r border-l font-light border-[#dbdbdb] font-opens leading-[53px] text-[#3461b4] text-[14px] w-[285px]">
+                                    <div class="border rounded-sm flex justify-center items-center h-[27px] border-[#3360b4] px-[10px] w-fit my-[5px] mx-auto">계약승인(결제 대기중)</div>
+                                </td>
+                            </tr>
+                            <tr class="" style="border-bottom: 1px solid #dbdbdb ; height: 50px">
+                                <td class="border-r border-l text-center font-light border-[#dbdbdb] font-opens leading-[53px] text-[#333]">Zunks 13172</td>
+                                <td class="border-r border-l text-center font-light border-[#dbdbdb] font-opens leading-[53px] text-[#333]">Zunks</td>
+                                <td class="border-r border-l text-center font-light border-[#dbdbdb] font-opens leading-[53px] text-[#333]">User123</td>
+                                <td class="border-r border-l text-center font-light border-[#dbdbdb] font-opens leading-[53px] text-[#333]">복제권 외 3</td>
+                                <td class="border-r border-l font-light border-[#dbdbdb] font-opens leading-[53px] text-[#4f9c43] text-[14px] w-[285px]">
+                                    <div class="border rounded-sm flex justify-center items-center h-[27px] border-[#4f9c42] px-[10px] w-fit my-[5px] mx-auto">계약</div>
+                                </td>
+                            </tr>
+                            <tr class="" style="border-bottom: 1px solid #dbdbdb ; height: 50px">
+                                <td class="border-r border-l text-center font-light border-[#dbdbdb] font-opens leading-[53px] text-[#333]">Zunks 13172</td>
+                                <td class="border-r border-l text-center font-light border-[#dbdbdb] font-opens leading-[53px] text-[#333]">Zunks</td>
+                                <td class="border-r border-l text-center font-light border-[#dbdbdb] font-opens leading-[53px] text-[#333]">User123</td>
+                                <td class="border-r border-l text-center font-light border-[#dbdbdb] font-opens leading-[53px] text-[#333]">복제권 외 3</td>
+                                <td class="border-r border-l font-light border-[#dbdbdb] font-opens leading-[53px] text-[#333] text-[14px] w-[285px]">
+                                    <div class="border rounded-sm flex justify-center items-center h-[27px] border-[#333] px-[10px] w-fit my-[5px] mx-auto">검토중</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+   
+</body>
+
+</html>
